@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Olá, bem-vindo!</h1>
+        <div class="subtitle" id="subtitulo"></div>
+        
+        <p>
+            Sou alguém que encontra o equilíbrio perfeito entre duas grandes paixões: a lógica e o movimento. No ambiente digital, adoro o desafio de <strong>programar</strong>, transformar ideias em linhas de código e ver sistemas ganharem vida. Fora das telas, minha energia se renova nos gramados, onde <strong>jogar futebol</strong> me conecta com a estratégia, o trabalho em equipe e a emoção do esporte.
+        </p>
+
+        <div class="hobbies">
+            <span class="badge badge-code">💻 Dev & Código</span>
+            <span class="badge badge-soccer">⚽ Futebol</span>
+        </div>
+
+        <div class="code-box-container">
+            <div class="code-box-header">
+                <span>index.html</span>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-html', this)">Copiar</button>
+            </div>
+            <pre class="code-box"><code id="codigo-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Sobre Mim&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, bem-vindo!&lt;/h1&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="code-box-container">
+            <div class="code-box-header">
+                <span>style.css</span>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-css', this)">Copiar</button>
+            </div>
+            <pre class="code-box"><code id="codigo-css">body {
+    background-color: #f4f7f6;
+    color: #3e4e50;
+    display: flex;
+}</code></pre>
+        </div>
+
+        <div class="code-box-container">
+            <div class="code-box-header">
+                <span>script.js</span>
+                <button class="copy-btn" onclick="copiarCodigo('codigo-js', this)">Copiar</button>
+            </div>
+            <pre class="code-box"><code id="codigo-js">const texto = "Um Pouco Sobre Mim...";
+console.log(texto);</code></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
