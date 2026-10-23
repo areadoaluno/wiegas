@@ -14,13 +14,17 @@ function digitarEfeito() {
 function copiarCodigo(idDoElemento, botaoClicado) {
     const codigoElemento = document.getElementById(idDoElemento);
     
+    if (!botaoClicado.hasAttribute('data-original')) {
+        botaoClicado.setAttribute('data-original', botaoClicado.textContent);
+    }
+    
     navigator.clipboard.writeText(codigoElemento.textContent).then(() => {
         botaoClicado.textContent = "Copiado!";
         botaoClicado.style.backgroundColor = "#e8f5e9";
         botaoClicado.style.color = "#43a047";
         
         setTimeout(() => {
-            botaoClicado.textContent = "Copiar";
+            botaoClicado.textContent = botaoClicado.getAttribute('data-original');
             botaoClicado.style.backgroundColor = "#e3f2fd";
             botaoClicado.style.color = "#1e88e5";
         }, 2000);
