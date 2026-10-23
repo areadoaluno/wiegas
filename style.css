@@ -106,7 +106,7 @@ p {
     background-color: #e3f2fd;
     color: #1e88e5;
     border: none;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -120,12 +120,12 @@ p {
 
 .code-box {
     background-color: #fafbfc;
-    padding: 12px 16px;
+    padding: 16px;
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.85rem;
     color: #2c3e50;
-    max-height: 150px;
+    max-height: 200px;
 }
 
 @keyframes piscarCursor {
