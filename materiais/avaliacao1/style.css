@@ -1,0 +1,73 @@
+/* Estilos principais da pagina */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #3e4e50;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border: 1px solid #e2ece9;
+    border-radius: 16px;
+    background-color: white;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.subtitle {
+    margin-bottom: 24px;
+    color: #7f8c8d;
+    letter-spacing: 2px;
+}
+
+.card p {
+    color: #5d6d7e;
+    line-height: 1.6;
+}
+
+.hobbies {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.badge-code {
+    background-color: #e3f2fd;
+    color: #1e88e5;
+}
+
+.badge-soccer {
+    background-color: #e8f5e9;
+    color: #43a047;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 24px;
+    }
+
+    .hobbies {
+        flex-wrap: wrap;
+    }
+}
