@@ -1,34 +1,45 @@
-const texto = "Um Pouco Sobre Mim...";
-let caractereIndex = 0;
+// Carrega os arquivos de exemplo nos paineis de codigo
+const paineisDeCodigo = document.querySelectorAll("[data-fonte]");
 
-function digitarEfeito() {
-    const elementoSubtitulo = document.getElementById("subtitulo");
-    
-    if (caractereIndex < texto.length) {
-        elementoSubtitulo.textContent += texto.charAt(caractereIndex);
-        caractereIndex++;
-        setTimeout(digitarEfeito, 100);
-    }
-}
+paineisDeCodigo.forEach(function (painel) {
+    fetch(painel.dataset.fonte)
+        .then(function (resposta) {
+            if (!resposta.ok) {
+                throw new Error("Erro ao carregar o arquivo.");
+            }
+            return resposta.text();
+        })
+        .then(function (codigo) {
+            painel.textContent = codigo;
+        })
+        .catch(function (erro) {
+            painel.textContent = "Nao foi possivel carregar. Acesse o site publicado ou use um servidor local.";
+            console.error("Erro no arquivo " + painel.dataset.fonte, erro);
+        });
+});
 
-function copiarCodigo(idDoElemento, botaoClicado) {
-    const codigoElemento = document.getElementById(idDoElemento);
-    
-    if (!botaoClicado.hasAttribute('data-original')) {
-        botaoClicado.setAttribute('data-original', botaoClicado.textContent);
-    }
-    
-    navigator.clipboard.writeText(codigoElemento.textContent).then(() => {
-        botaoClicado.textContent = "Copiado!";
-        botaoClicado.style.backgroundColor = "#e8f5e9";
-        botaoClicado.style.color = "#43a047";
-        
-        setTimeout(() => {
-            botaoClicado.textContent = botaoClicado.getAttribute('data-original');
-            botaoClicado.style.backgroundColor = "#e3f2fd";
-            botaoClicado.style.color = "#1e88e5";
-        }, 2000);
+// Copia o codigo do arquivo aberto
+const botoesCopiar = document.querySelectorAll(".botao-copiar");
+
+botoesCopiar.forEach(function (botao) {
+    botao.addEventListener("click", async function () {
+        const caminho = botao.dataset.copiar;
+        const painel = document.querySelector('[data-fonte="' + caminho + '"]');
+        const mensagem = botao.closest(".arquivo").querySelector(".mensagem-copia");
+
+        try {
+            if (!painel || painel.textContent.startsWith("Nao foi possivel")) {
+                throw new Error("O codigo ainda nao esta disponivel.");
+            }
+            if (!navigator.clipboard) {
+                throw new Error("A copia nao esta disponivel neste navegador.");
+            }
+
+            await navigator.clipboard.writeText(painel.textContent);
+            mensagem.textContent = "Codigo copiado!";
+        } catch (erro) {
+            mensagem.textContent = erro.message + " Selecione o texto para copiar manualmente.";
+            console.error("Erro ao copiar " + caminho, erro);
+        }
     });
-}
-
-window.onload = digitarEfeito;
+});
