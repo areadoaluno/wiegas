@@ -1,21 +1,16 @@
-// Carrega os arquivos de exemplo nos paineis de codigo
+// Mostra os codigos incluidos no projeto
 const paineisDeCodigo = document.querySelectorAll("[data-fonte]");
 
 paineisDeCodigo.forEach(function (painel) {
-    fetch(painel.dataset.fonte)
-        .then(function (resposta) {
-            if (!resposta.ok) {
-                throw new Error("Erro ao carregar o arquivo.");
-            }
-            return resposta.text();
-        })
-        .then(function (codigo) {
-            painel.textContent = codigo;
-        })
-        .catch(function (erro) {
-            painel.textContent = "Nao foi possivel carregar. Acesse o site publicado ou use um servidor local.";
-            console.error("Erro no arquivo " + painel.dataset.fonte, erro);
-        });
+    const caminho = painel.dataset.fonte;
+    const codigo = window.codigosAvaliacao[caminho];
+
+    if (codigo) {
+        painel.textContent = codigo;
+    } else {
+        painel.textContent = "Codigo nao encontrado: " + caminho;
+        console.error("Codigo nao encontrado:", caminho);
+    }
 });
 
 // Copia o codigo do arquivo aberto
@@ -28,8 +23,8 @@ botoesCopiar.forEach(function (botao) {
         const mensagem = botao.closest(".arquivo").querySelector(".mensagem-copia");
 
         try {
-            if (!painel || painel.textContent.startsWith("Nao foi possivel")) {
-                throw new Error("O codigo ainda nao esta disponivel.");
+            if (!painel || !window.codigosAvaliacao[caminho]) {
+                throw new Error("O codigo nao foi encontrado.");
             }
             if (!navigator.clipboard) {
                 throw new Error("A copia nao esta disponivel neste navegador.");
