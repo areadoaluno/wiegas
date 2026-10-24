@@ -3,215 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim</title>
+    <title>Códigos das avaliações</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <main class="materiais">
+        <header class="titulo-materiais">
+            <p class="etiqueta">ÁREA DO ALUNO</p>
+            <h1>Códigos das avaliações</h1>
+            <p>Abra um arquivo para ver o código. Use "Copiar código" ou "Baixar arquivo".</p>
+        </header>
 
-    <div class="card">
-        <h1>Olá, bem-vindo!</h1>
-        <div class="subtitle" id="subtitulo"></div>
-        
-        <p>
-            Sou alguém que encontra o equilíbrio perfeito entre duas grandes paixões: a lógica e o movimento. No ambiente digital, adoro o desafio de <strong>programar</strong>, transformar ideias em linhas de código e ver sistemas ganharem vida. Fora das telas, minha energia se renova nos gramados, onde <strong>jogar futebol</strong> me conecta com a estratégia, o trabalho em equipe e a emoção do esporte.
-        </p>
+        <div class="lista-avaliacoes">
+            <section class="avaliacao">
+                <h2>Avaliação 1 — Sobre Mim</h2>
+                <p>Uma página pessoal feita com HTML, CSS e JavaScript.</p>
 
-        <div class="hobbies">
-            <span class="badge badge-code">💻 Dev & Código</span>
-            <span class="badge badge-soccer">⚽ Futebol</span>
+                <details class="arquivo">
+                    <summary>index.html</summary>
+                    <div class="acoes-arquivo">
+                        <button class="botao-copiar" data-copiar="materiais/avaliacao1/index.html">Copiar código</button>
+                        <a href="materiais/avaliacao1/index.html" download>Baixar arquivo</a>
+                    </div>
+                    <pre><code data-fonte="materiais/avaliacao1/index.html">Carregando o código...</code></pre>
+                    <p class="mensagem-copia" aria-live="polite"></p>
+                </details>
+
+                <details class="arquivo">
+                    <summary>style.css</summary>
+                    <div class="acoes-arquivo">
+                        <button class="botao-copiar" data-copiar="materiais/avaliacao1/style.css">Copiar código</button>
+                        <a href="materiais/avaliacao1/style.css" download>Baixar arquivo</a>
+                    </div>
+                    <pre><code data-fonte="materiais/avaliacao1/style.css">Carregando o código...</code></pre>
+                    <p class="mensagem-copia" aria-live="polite"></p>
+                </details>
+
+                <details class="arquivo">
+                    <summary>script.js</summary>
+                    <div class="acoes-arquivo">
+                        <button class="botao-copiar" data-copiar="materiais/avaliacao1/script.js">Copiar código</button>
+                        <a href="materiais/avaliacao1/script.js" download>Baixar arquivo</a>
+                    </div>
+                    <pre><code data-fonte="materiais/avaliacao1/script.js">Carregando o código...</code></pre>
+                    <p class="mensagem-copia" aria-live="polite"></p>
+                </details>
+            </section>
+
+            <section class="avaliacao">
+                <h2>Avaliação 2 — Blog de Games</h2>
+                <p>Um blog com notícias e filtros por categoria.</p>
+
+                <details class="arquivo">
+                    <summary>index.html</summary>
+                    <div class="acoes-arquivo">
+                        <button class="botao-copiar" data-copiar="materiais/avaliacao2/index.html">Copiar código</button>
+                        <a href="materiais/avaliacao2/index.html" download>Baixar arquivo</a>
+                    </div>
+                    <pre><code data-fonte="materiais/avaliacao2/index.html">Carregando o código...</code></pre>
+                    <p class="mensagem-copia" aria-live="polite"></p>
+                </details>
+
+                <details class="arquivo">
+                    <summary>style.css</summary>
+                    <div class="acoes-arquivo">
+                        <button class="botao-copiar" data-copiar="materiais/avaliacao2/style.css">Copiar código</button>
+                        <a href="materiais/avaliacao2/style.css" download>Baixar arquivo</a>
+                    </div>
+                    <pre><code data-fonte="materiais/avaliacao2/style.css">Carregando o código...</code></pre>
+                    <p class="mensagem-copia" aria-live="polite"></p>
+                </details>
+
+                <details class="arquivo">
+                    <summary>script.js</summary>
+                    <div class="acoes-arquivo">
+                        <button class="botao-copiar" data-copiar="materiais/avaliacao2/script.js">Copiar código</button>
+                        <a href="materiais/avaliacao2/script.js" download>Baixar arquivo</a>
+                    </div>
+                    <pre><code data-fonte="materiais/avaliacao2/script.js">Carregando o código...</code></pre>
+                    <p class="mensagem-copia" aria-live="polite"></p>
+                </details>
+            </section>
         </div>
+    </main>
 
-        <div class="code-box-container">
-            <div class="code-box-header">
-                <span>index.html (Completo)</span>
-                <button class="copy-btn" onclick="copiarCodigo('codigo-html', this)">Copiar HTML</button>
-            </div>
-            <pre class="code-box"><code id="codigo-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Sobre Mim&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="card"&gt;
-        &lt;h1&gt;Olá, bem-vindo!&lt;/h1&gt;
-        &lt;div class="subtitle" id="subtitulo"&gt;&lt;/div&gt;
-        &lt;p&gt;Sou alguém que encontra o equilíbrio perfeito entre duas grandes paixões: a lógica e o movimento. No ambiente digital, adoro o desafio de &lt;strong&gt;programar&lt;/strong&gt;, transformar ideias em linhas de código e ver sistemas ganharem vida. Fora das telas, minha energia se renova nos gramados, onde &lt;strong&gt;jogar futebol&lt;/strong&gt; me conecta com a estratégia, o trabalho em equipe e a emoção do esporte.&lt;/p&gt;
-        &lt;div class="hobbies"&gt;
-            &lt;span class="badge badge-code"&gt;💻 Dev & Código&lt;/span&gt;
-            &lt;span class="badge badge-soccer"&gt;⚽ Futebol&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src="script.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-        </div>
-
-        <div class="code-box-container">
-            <div class="code-box-header">
-                <span>style.css (Completo)</span>
-                <button class="copy-btn" onclick="copiarCodigo('codigo-css', this)">Copiar CSS</button>
-            </div>
-            <pre class="code-box"><code id="codigo-css">* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
-    background-color: #f4f7f6;
-    color: #3e4e50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-.card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    max-width: 500px;
-    width: 100%;
-    padding: 40px;
-    text-align: center;
-    border: 1px solid #e2ece9;
-}
-h1 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-.subtitle {
-    font-size: 0.9rem;
-    color: #7f8c8d;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    display: inline-block;
-    border-right: 2px solid #7f8c8d;
-    white-space: nowrap;
-    animation: piscarCursor 0.7s step-end infinite;
-}
-p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #5d6d7e;
-    margin-bottom: 30px;
-}
-.hobbies {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-.badge {
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-.badge:hover {
-    transform: scale(1.05);
-}
-.badge-code {
-    background-color: #e3f2fd;
-    color: #1e88e5;
-}
-.badge-soccer {
-    background-color: #e8f5e9;
-    color: #43a047;
-}
-.code-box-container {
-    margin-top: 15px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #e2ece9;
-    text-align: left;
-}
-.code-box-header {
-    background-color: #f8faf9;
-    padding: 8px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-    color: #7f8c8d;
-    font-weight: 600;
-    border-bottom: 1px solid #e2ece9;
-}
-.copy-btn {
-    background-color: #e3f2fd;
-    color: #1e88e5;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.75rem;
-    transition: all 0.2s;
-}
-.copy-btn:hover {
-    background-color: #d0e8ff;
-}
-.code-box {
-    background-color: #fafbfc;
-    padding: 16px;
-    overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.85rem;
-    color: #2c3e50;
-    max-height: 200px;
-}
-@keyframes piscarCursor {
-    from, to { border-color: transparent }
-    50% { border-color: #7f8c8d; }
-}</code></pre>
-        </div>
-
-        <div class="code-box-container">
-            <div class="code-box-header">
-                <span>script.js (Completo)</span>
-                <button class="copy-btn" onclick="copiarCodigo('codigo-js', this)">Copiar JS</button>
-            </div>
-            <pre class="code-box"><code id="codigo-js">const texto = "Um Pouco Sobre Mim...";
-let caractereIndex = 0;
-
-function digitarEfeito() {
-    const elementoSubtitulo = document.getElementById("subtitulo");
-    
-    if (caractereIndex < texto.length) {
-        elementoSubtitulo.textContent += texto.charAt(caractereIndex);
-        caractereIndex++;
-        setTimeout(digitarEfeito, 100);
-    }
-}
-
-function copiarCodigo(idDoElemento, botaoClicado) {
-    const codigoElemento = document.getElementById(idDoElemento);
-    
-    navigator.clipboard.writeText(codigoElemento.textContent).then(() => {
-        botaoClicado.textContent = "Copiado!";
-        botaoClicado.style.backgroundColor = "#e8f5e9";
-        botaoClicado.style.color = "#43a047";
-        
-        setTimeout(() => {
-            botaoClicado.textContent = botaoClicado.getAttribute('data-original') || "Copiar";
-            botaoClicado.style.backgroundColor = "#e3f2fd";
-            botaoClicado.style.color = "#1e88e5";
-        }, 2000);
-    });
-}
-
-window.onload = digitarEfeito;</code></pre>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <footer class="rodape">
+        <p>Feito por quem também não consegue pausar no melhor momento.</p>
+    </footer>
 </body>
 </html>
